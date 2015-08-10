@@ -2,7 +2,7 @@
 ## Running the test
 ### Windows
 
-- Clone this repository: `git clone https://github.com/alancnet/codetest-1`
+- Clone this repository: `git clone https://gitlab.eventops.io/recruiting/codetest-1`
 - Or click [![](http://i.imgur.com/Su6om9f.png)](archive/master.zip), and unzip to a directory.
 - Using Windows Explorer, browse to `codetest-1\test`, and double click on `test.cmd`
 
@@ -27,7 +27,7 @@
         - Install brew (http://brew.sh)
         - In Terminal, run `brew install scala node`
     - Ubuntu: `sudo apt-get install git scala mono-devel fsharp nodejs npm openjdk-7-jdk`
-- Clone this repository: `git clone https://github.com/alancnet/codetest-1`
+- Clone this repository: `git clone https://gitlab.eventops.io/recruiting/codetest-1`
 - Run the test script
   - `cd codetest-1/test`
   - `sh test.sh`
