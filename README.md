@@ -3,7 +3,7 @@
 ### Windows
 
 - Clone this repository: `git clone https://gitlab.eventops.io/recruiting/codetest-1.git`
-- Or click [![](http://i.imgur.com/Su6om9f.png)](archive/master.zip), and unzip to a directory.
+- Or click the Download button above and unzip to a directory.
 - Using Windows Explorer, browse to `codetest-1\test`, and double click on `test.cmd`
 
 ![](http://i.imgur.com/LFlkioh.png)
