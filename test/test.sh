@@ -7,7 +7,7 @@ if [ -z "$JAVAEXE" ]; then JAVAEXE=$(which java); fi
 if [ -z "$SCALAEXE" ]; then SCALAEXE=$(which scala); fi
 
 # Find JavaScript Executer
-if [ -z "$JSEXE" ]; then JSEXE=$(which js); fi
+#if [ -z "$JSEXE" ]; then JSEXE=$(which js); fi
 if [ -z "$JSEXE" ]; then JSEXE=$(which node); fi
 
 # Find Mono Executer
