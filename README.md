@@ -26,12 +26,19 @@
         - Install Mono (http://www.mono-project.com/download/)
         - Install brew (http://brew.sh)
         - In Terminal, run `brew install scala node`
-    - Ubuntu: `sudo apt-get install git scala mono-devel fsharp nodejs npm openjdk-7-jdk`
+    - Ubuntu: 
+        - Install git (`sudo apt-get install git`)
+        - Install mono/fsharp (`sudo apt-get install mono-devel fsharp`)
+        - Install node
+        ````
+        curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+        ````
+        - Install java 8 and scala 2.11.7 (see https://gist.github.com/bigsnarfdude/b2eb1cabfdaf7e62a8fc)
 - Clone this repository: `git clone https://gitlab.eventops.io/recruiting/codetest-1.git`
 - Run the test script
   - `cd codetest-1/test`
   - `sh test.sh`
-- Run cd to test and sh test.sh from a terminal
 - Open and edit the [Cc]ode.* files in the main directory. Use any code editor you are comfortable with.
 - Test will re-execute on any code change.
 - Press Ctrl-C to exit test monitor.
