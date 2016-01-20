@@ -67,8 +67,8 @@ namespace test
         }
 
         static AutoResetEvent needsBuild = new AutoResetEvent(true);
-        static bool EnableCSharp = true;
-        static bool EnableFSharp = true;
+        static bool EnableCSharp = false;
+        static bool EnableFSharp = false;
         static bool EnableScala = true;
         static bool EnableJavaScript = true;
         static bool EnableJava = true;
