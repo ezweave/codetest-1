@@ -54,6 +54,15 @@ namespace test
             }
             return results;
         }
+        static IEnumerable<Result> PHP()
+        {
+            List<Result> results = new List<Result>();
+            if (EnablePHP)
+            {
+                results.AddRange(Exec(5000, "..", "%PHPEXE%", "code\\main.php"));
+            }
+            return results;
+        }
 
         static IEnumerable<Result> Java()
         {
@@ -72,6 +81,7 @@ namespace test
         static bool EnableScala = true;
         static bool EnableJavaScript = true;
         static bool EnableJava = true;
+        static bool EnablePHP = true;
         
         static void Main(string[] args)
         {
@@ -98,12 +108,16 @@ namespace test
                     case "D5":
                         EnableJava = !EnableJava;
                         break;
+                    case "D6":
+                        EnablePHP = !EnablePHP;
+                        break;
                     case "Shift-D1":
                         EnableCSharp = true;
                         EnableFSharp = false;
                         EnableScala = false;
                         EnableJavaScript = false;
                         EnableJava = false;
+                        EnablePHP = false;
                         break;
                     case "Shift-D2":
                         EnableCSharp = false;
@@ -111,6 +125,7 @@ namespace test
                         EnableScala = false;
                         EnableJavaScript = false;
                         EnableJava = false;
+                        EnablePHP = false;
                         break;
                     case "Shift-D3":
                         EnableCSharp = false;
@@ -118,6 +133,7 @@ namespace test
                         EnableScala = true;
                         EnableJavaScript = false;
                         EnableJava = false;
+                        EnablePHP = false;
                         break;
                     case "Shift-D4":
                         EnableCSharp = false;
@@ -125,6 +141,7 @@ namespace test
                         EnableScala = false;
                         EnableJavaScript = true;
                         EnableJava = false;
+                        EnablePHP = false;
                         break;
                     case "Shift-D5":
                         EnableCSharp = false;
@@ -132,6 +149,15 @@ namespace test
                         EnableScala = false;
                         EnableJavaScript = false;
                         EnableJava = true;
+                        EnablePHP = false;
+                        break;
+                    case "Shift-D6":
+                        EnableCSharp = false;
+                        EnableFSharp = false;
+                        EnableScala = false;
+                        EnableJavaScript = false;
+                        EnableJava = false;
+                        EnablePHP = true;
                         break;
                     case "F5":
                         break;
@@ -165,7 +191,8 @@ namespace test
                         FSharp,
                         Scala,
                         JavaScript,
-                        Java
+                        Java,
+                        PHP
                     });
         
                     PrintResults(results.Result);
@@ -211,6 +238,7 @@ namespace test
             PrintMenuItem("3", "Scala", EnableScala);
             PrintMenuItem("4", "JavaScript", EnableJavaScript);
             PrintMenuItem("5", "Java", EnableJava);
+            PrintMenuItem("5", "PHP", EnablePHP);
             PrintMenuItem("F5", "Rebuild", null);
             Console.WriteLine("".PadRight(Console.BufferWidth));
             Console.CursorLeft = x;

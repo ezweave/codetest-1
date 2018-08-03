@@ -6,6 +6,9 @@ if [ -z "$JAVAEXE" ]; then JAVAEXE=$(which java); fi
 # Find Scala Executer
 if [ -z "$SCALAEXE" ]; then SCALAEXE=$(which scala); fi
 
+# Find PHP Executer
+if [ -z "$PHPEXE" ]; then PHPEXE=$(which php); fi
+
 # Find JavaScript Executer
 #if [ -z "$JSEXE" ]; then JSEXE=$(which js); fi
 if [ -z "$JSEXE" ]; then JSEXE=$(which node); fi
@@ -27,6 +30,7 @@ if [ -z "$FSC" ]; then FSC=$(which fsharpc); fi
 
 echo JAVAEXE=$JAVAEXE
 echo SCALAEXE=$SCALAEXE
+echo PHPEXE=$PHPEXE
 echo JSEXE=$JSEXE
 echo MONOEXE=$MONOEXE
 echo JAVAC=$JAVAC
@@ -36,6 +40,7 @@ echo FSC=$FSC
 
 export JAVAEXE=$JAVAEXE
 export SCALAEXE=$SCALAEXE
+export PHPEXE=$PHPEXE
 export JSEXE=$JSEXE
 export MONOEXE=$MONOEXE
 export JAVAC=$JAVAC
@@ -48,6 +53,7 @@ ERRS=0
 
 if [ -z "$JAVAEXE" ]; then ERRS=$(expr $ERRS + 1) && echo Unable to find Java. Please make sure Java is installed.; fi
 if [ -z "$SCALAEXE" ]; then ERRS=$(expr $ERRS + 1) && echo Unable to find Scala. Please make sure Scala is installed.; fi
+if [ -z "$PHPEXE" ]; then ERRS=$(expr $ERRS + 1) && echo Unable to find PHP. Please make sure PHP is installed.; fi
 if [ -z "$JSEXE" ]; then ERRS=$(expr $ERRS + 1) && echo Unable to find JavaScript. Please make sure Node is installed.; fi
 if [ -z "$MONOEXE" ]; then ERRS=$(expr $ERRS + 1) && echo Unable to find Mono. Please make sure Mono is installed.; fi
 if [ -z "$JAVAC" ]; then ERRS=$(expr $ERRS + 1) && echo Unable to find Java Compiler. Please make sure JDK is installed.; fi
