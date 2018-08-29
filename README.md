@@ -1,9 +1,8 @@
 # Code Test
 ## Running the test
+- Fork this repository
+- Clone your fork: `git clone https://github.com/<your github username>/codetest-1.git`
 ### Windows
-
-- Clone this repository: `git clone https://gitlab.eventops.io/recruiting/codetest-1.git`
-- Or click the Download button above and unzip to a directory.
 - Using Windows Explorer, browse to `codetest-1\test`, and double click on `test.cmd`
 
 ![](http://i.imgur.com/LFlkioh.png)
@@ -14,6 +13,13 @@
 
 ![](http://i.imgur.com/fvPU3IQ.png)
 - Press Ctrl-C to exit test monitor.
+- Push to your fork
+    ```
+    git checkout -b "<your-name-with-dashes>"
+    git commit -am"my test answers"
+    git push --set-upstream-to=<your-name-with-dashes> origin
+    ```
+- Submit a pull request 
 
 ### Mac/Linux
 - Run Terminal ![](http://i.imgur.com/SXN3tNM.png)
@@ -35,10 +41,18 @@
         sudo apt-get install -y nodejs
         ````
         - Install java 8 and scala 2.11.7 (see https://gist.github.com/bigsnarfdude/b2eb1cabfdaf7e62a8fc)
-- Clone this repository: `git clone https://gitlab.eventops.io/recruiting/codetest-1.git`
+- Fork this repository
+- Clone your fork: `git clone https://github.com/<your github username>/codetest-1.git`
 - Run the test script
   - `cd codetest-1/test`
   - `sh test.sh`
 - Open and edit the [Cc]ode.* files in the main directory. Use any code editor you are comfortable with.
 - Test will re-execute on any code change.
 - Press Ctrl-C to exit test monitor.
+- Push to your fork
+    ```
+    git checkout -b "<your-name-with-dashes>"
+    git commit -am"my test answers"
+    git push --set-upstream-to=<your-name-with-dashes> origin
+    ```
+- Submit a pull request
