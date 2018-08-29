@@ -34,10 +34,11 @@
         - In Terminal, run `brew install scala node`
     - Ubuntu: 
         - Install git (`sudo apt-get install git`)
+        - Install PHP (`sudo apt-get install php
         - Install mono/fsharp (`sudo apt-get install mono-devel fsharp`)
         - Install node
         ````
-        curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+        curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
         sudo apt-get install -y nodejs
         ````
         - Install java 8 and scala 2.11.7 (see https://gist.github.com/bigsnarfdude/b2eb1cabfdaf7e62a8fc)
