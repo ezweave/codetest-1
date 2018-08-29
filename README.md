@@ -17,7 +17,7 @@
     ```
     git checkout -b "<your-name-with-dashes>"
     git commit -am"my test answers"
-    git push --set-upstream-to=<your-name-with-dashes> origin
+    git push --set-upstream origin <your-name-with-dashes>
     ```
 - Submit a pull request 
 
@@ -53,6 +53,6 @@
     ```
     git checkout -b "<your-name-with-dashes>"
     git commit -am"my test answers"
-    git push --set-upstream-to=<your-name-with-dashes> origin
+    git push --set-upstream origin <your-name-with-dashes>
     ```
 - Submit a pull request
