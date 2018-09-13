@@ -1,11 +1,3 @@
-const filterAlphaNumericOnly = (word) =>
-  word.split('').filter(c => {
-    const code = c.charCodeAt(0)
-    return (code > 47 && code < 58) || 
-      (code > 64 && code < 91) ||
-      (code > 96 && code < 123)
-  }).join('')
-
 const capitalizeWord = (word) => 
   word.split('').map((letter, index) =>
     (index === 0) ? letter.toUpperCase() : letter
@@ -20,17 +12,20 @@ var code = {
     capitalizeEveryNthWord: function(sentence, offset, n) {
       return sentence
         .split(' ')
-        .filter(filterAlphaNumericOnly)
-        .slice(offset)
-        .map((word, index) => {
-          return (index % n == 0) ? capitalizeWord(word) : word 
-        })
-        .join(' ')
+        .map((word, index) => 
+            ((index + 1) > offset && index % n === 0) ? capitalizeWord(word) : word   
+        ).join(' ')
     },
     
     // Determine if a number is prime
     isPrime: function(n) {
-        throw new rror("Not Implemented");
+      return (n > 1) && Number.isInteger(n) && new Array(n - 1)
+        .fill(n)
+        .map((val, index) =>
+          val - index)
+        .filter(val => 
+          (val !== n) && Number.isInteger(n / val)
+        ).length === 0
     },
     
     // Calculate the golden ratio.
